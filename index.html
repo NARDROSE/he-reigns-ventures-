@@ -268,6 +268,41 @@ document.getElementById("result").innerHTML =
 daily.toFixed(2) +
 "<br><br>Weekly Estimate: GHC " +
 weekly.toFixed(2);
+  function sendOrder(){
+
+let fullname =
+document.getElementById("fullname").value;
+
+let phone =
+document.getElementById("phone").value;
+
+let region =
+document.getElementById("region").value;
+
+let landmark =
+document.getElementById("landmark").value;
+
+let product =
+document.getElementById("product").value;
+
+let info =
+document.getElementById("info").value;
+
+let message =
+"NEW ORDER%0A%0A" +
+"Name: " + fullname + "%0A" +
+"Phone: " + phone + "%0A" +
+"Region: " + region + "%0A" +
+"Landmark: " + landmark + "%0A" +
+"Product: " + product + "%0A" +
+"Info: " + info;
+
+window.open(
+"https://wa.me/233272673203?text=" + message,
+"_blank"
+);
+
+}
 }
 </script>
   <div class="section">
@@ -285,7 +320,7 @@ weekly.toFixed(2);
 
 <textarea id="info" placeholder="Additional Information"></textarea>
 
-<button class="btn">
+<button class="btn" onclick="sendOrder()">
 Submit Order
 </button>
 
